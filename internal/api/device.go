@@ -2,7 +2,6 @@ package api
 
 import (
 	"encoding/json"
-	"fmt"
 	"net/http"
 
 	"github.com/freemial/freemial-server-go/internal/websocket"
@@ -39,7 +38,7 @@ func GetDeviceBindings(hub *websocket.Hub, w http.ResponseWriter, r *http.Reques
 			State:      "BOUND",
 			ChangeDate: "changeDate",
 			Code:       "code",
-			Name:       "TeeMachine-" + fmt.Sprint(i),
+			Name:       name,
 		}
 	}
 
